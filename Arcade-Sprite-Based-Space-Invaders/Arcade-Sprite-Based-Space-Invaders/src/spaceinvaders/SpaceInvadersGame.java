@@ -12,7 +12,7 @@ public class SpaceInvadersGame extends MainFrame {
 		super("Space Invaders");
 	}
 	
-	protected  AbstractBoard createBoard() {
+	protected AbstractBoard createBoard() {
 		return new SpaceInvadersBoard();
 	}
 

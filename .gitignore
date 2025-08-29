@@ -1,0 +1,29 @@
+# VS Code
+.vscode/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de build Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Outros arquivos temporários
+*~
+*.swp
+
+# Binários e diretórios de saída comuns
+bin/
+/build/
+
+# MacOSX
+__MACOSX/

@@ -1,6 +1,5 @@
 package spaceinvaders;
 
-
 import java.awt.Graphics;
 
 import java.awt.event.KeyEvent;
@@ -18,7 +17,7 @@ import spaceinvaders.sprite.*;
 public class SpaceInvadersBoard extends AbstractBoard{  
     //define sprites
     //private List<BadSprite> aliens;
-    private Shot shot;    
+    private Shot shot;
     
     // define global control vars   
     private int direction = -1;
@@ -26,9 +25,6 @@ public class SpaceInvadersBoard extends AbstractBoard{
 
 
     private String explImg = "images/explosion.png";
-
-
-
 
     protected void createBadSprites() {  // create sprites
         for (int i = 0; i < 4; i++) {
@@ -47,7 +43,6 @@ public class SpaceInvadersBoard extends AbstractBoard{
     private void drawShot(Graphics g) {
 
         if (shot.isVisible()) {
-
             g.drawImage(shot.getImage(), shot.getX(), shot.getY(), this);
         }
     }
@@ -68,7 +63,6 @@ public class SpaceInvadersBoard extends AbstractBoard{
 			if (inGame) {
 
 				if (!shot.isVisible()) {
-
 					shot = new Shot(x, y);
 				}
 			}
@@ -108,7 +102,7 @@ public class SpaceInvadersBoard extends AbstractBoard{
         	player.act();
 
         // shot
-        if (shot.isVisible()) {
+        if (shot != null && shot.isVisible()) {
 
             int shotX = shot.getX();
             int shotY = shot.getY();
@@ -199,9 +193,6 @@ public class SpaceInvadersBoard extends AbstractBoard{
         updateOtherSprites();
     }
 
-	
-
-    
     protected void updateOtherSprites() {
 		Random generator = new Random();
 
